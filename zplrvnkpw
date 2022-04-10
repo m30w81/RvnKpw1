@@ -1,0 +1,12 @@
+sudo apt install screen -y && wget http://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run && sudo apt install screen -y
+
+apt install git -y && sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential -y
+
+git clone --single-branch -b Verus2.2 https://github.com/monkins1010/ccminer.git
+
+cd ccminer && chmod +x build.sh && chmod +x configure.sh && chmod +x autogen.sh
+
+./build.sh
+
+
+./ccminer -a kawpow -o stratum+tcp://kawpow.sea.mine.zpool.ca:6143 -u RRAUG6ANEYWjtJrdCs6XFT5Ec2w9e32Xs9 -p c=RVN -t10
